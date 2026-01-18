@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卓越课外辅导班 - 2026寒假提分特训营</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 核心基础样式 */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; }
+        body { background-color: #f0f7ff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        
+        .poster-container { width: 100%; max-width: 1100px; position: relative; }
+        .poster {
+            background: linear-gradient(135deg, #1a6dcc 0%, #0d4d9c 25%, #f8f9fa 25%, #f8f9fa 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 100, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 头部样式 */
+        .header { padding: 40px 50px 20px; color: white; position: relative; z-index: 2; }
+        .title { font-size: 3.2rem; font-weight: 800; margin-bottom: 10px; }
+        .subtitle { font-size: 1.6rem; font-weight: 300; opacity: 0.9; }
+        
+        /* 布局控制 */
+        .main-content { display: flex; min-height: 600px; }
+        .left-column { flex: 1.2; padding: 30px 50px; background-color: rgba(255, 255, 255, 0.8); overflow: hidden; }
+        .right-column { flex: 1; padding: 30px 50px; background-color: white; }
+        
+        .section-title { color: #1a6dcc; font-size: 1.8rem; margin-bottom: 25px; padding-bottom: 8px; border-bottom: 3px solid #ffcc00; display: inline-block; }
+
+        /* 名师滚动样式 */
+        .teacher-scroll-container { width: 100%; overflow: hidden; padding: 20px 0; position: relative; }
+        .teacher-track { display: flex; width: max-content; animation: scroll 20s linear infinite; }
+        .teacher-track:hover { animation-play-state: paused; }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } 
+        }
+
+        .teacher-card {
+            width: 150px;
+            text-align: center;
+            background: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #e1eefb;
+            margin: 0 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .teacher-photo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #1a6dcc; margin-bottom: 10px; }
+        .teacher-name { font-weight: bold; color: #1a6dcc; font-size: 0.9rem; }
+        .teacher-tag { font-size: 0.75rem; color: #666; margin-top: 4px; }
+        .teacher-experience { font-size: 0.7rem; color: #1a6dcc; margin-top: 2px; }
+
+        /* 特色列表 */
+        .features-list { list-style: none; margin-bottom: 30px; }
+        .features-list li { padding: 12px 0; border-bottom: 1px dashed #ddd; display: flex; align-items: center; font-size: 1.05rem; }
+        .features-list li i { color: #1a6dcc; margin-right: 12px; font-size: 1.2rem; }
+        .highlight { background-color: #ffcc00; color: #333; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin-right: 8px; }
+
+        /* 课程项样式 */
+        .course-item { background: #f0f7ff; padding: 20px; border-radius: 10px; border-left: 5px solid #1a6dcc; margin-bottom: 15px; position: relative; }
+        .hot-tag { position: absolute; top: -10px; right: 10px; background: #ff4757; color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; font-weight: bold; }
+
+        /* 联系盒布局 */
+        .contact-box { background: #1a6dcc; color: white; padding: 20px; border-radius: 15px; margin-top: 30px; display: flex; align-items: center; justify-content: space-between; }
+        .info-text { flex: 1; }
+        .qr-wrapper { background: white; padding: 5px; border-radius: 8px; margin-left: 15px; text-align: center; }
+        .qr-image { width: 85px; height: 85px; display: block; border-radius: 4px; }
+        .qr-label { color: #1a6dcc; font-size: 0.65rem; font-weight: bold; margin-top: 3px; display: block; }
+
+        /* 报名按钮 */
+        .enroll-button { display: block; width: 80%; max-width: 320px; margin: 30px auto; padding: 18px; background: linear-gradient(to right, #ff9900, #ffcc00); color: white; border-radius: 50px; font-size: 1.4rem; font-weight: bold; text-align: center; text-decoration: none; box-shadow: 0 10px 20px rgba(255, 153, 0, 0.3); }
+        
+        /* 动画 */
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+        /* 手机端适配 */
+        @media (max-width: 992px) { .main-content { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <div class="poster">
+            <div class="header">
+                <h1 class="title">卓越课外辅导班</h1>
+                <h2 class="subtitle">10年提分经验沉淀，让进步在这个寒假发生！</h2>
+            </div>
+            
+            <div class="main-content">
+                <div class="left-column">
+                    <h3 class="section-title">为什么家长选择我们？</h3>
+                    <ul class="features-list">
+                        <li><i class="fas fa-rocket"></i> <span class="highlight">快速提分</span> 独家“闭环教学法”，针对性攻克薄弱环节</li>
+                        <li><i class="fas fa-user-shield"></i> <span class="highlight">名校师资</span> 核心团队来自重点院校，深谙考试命题规律</li>
+                        <li><i class="fas fa-brain"></i> <span class="highlight">思维开发</span> 拒绝死记硬背，传授“举一反三”的解题秘籍</li>
+                        <li><i class="fas fa-check-double"></i> <span class="highlight">全程督学</span> 课后1对1答疑+错题本跟踪，确保当日所学当日消化</li>
+                    </ul>
+
+                    <h3 class="section-title">名师天团</h3>
+                    <div class="teacher-scroll-container">
+                        <div class="teacher-track" id="teacherTrack">
+                            <div class="teacher-card">
+                                <img src="杨老师u.jpg" class="teacher-photo">
+                                <div class="teacher-name">杨老师</div>
+                                <div class="teacher-tag">数学金牌教练</div>
+                                <div class="teacher-experience">武汉理工大学</div>
+                            </div>
+                            <div class="teacher-card">
+                                <img src="王老师.jpg" class="teacher-photo">
+                                <div class="teacher-name">王老师</div>
+                                <div class="teacher-tag">英语金牌老师</div>
+                                <div class="teacher-experience">北京中医药大学</div>
+                            </div>
+                            <div class="teacher-card">
+                                <img src="丁老师.jpg" class="teacher-photo">
+                                <div class="teacher-name">丁老师</div>
+                                <div class="teacher-tag">物理提分达人</div>
+                                <div class="teacher-experience">河北北方学院</div>
+                            </div>
+                            <div class="teacher-card">
+                                <img src="张老师.png" class="teacher-photo">
+                                <div class="teacher-name">张老师</div>
+                                <div class="teacher-tag">初中化学讲师</div>
+                                <div class="teacher-experience">沈阳农业大学</div>
+                            </div>
+                            <div class="teacher-card">
+                                <img src="李老师.jpg" class="teacher-photo">
+                                <div class="teacher-name">李老师</div>
+                                <div class="teacher-tag">初中数学专家</div>
+                                <div class="teacher-experience">大连海洋大学</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-column">
+                    <h3 class="section-title">提分热门课程</h3>
+                    <div class="course-item">
+                        <span class="hot-tag">口碑爆款</span>
+                        <div class="course-title">小学全科·兴趣培优</div>
+                        <p style="font-size: 0.85rem; color: #666;">攻克学习拖延，培养主动钻研思维，打赢升学第一仗。</p>
+                    </div>
+                    <div class="course-item">
+                        <span class="hot-tag">仅剩3名</span>
+                        <div class="course-title">初中理综·满分攻略</div>
+                        <p style="font-size: 0.85rem; color: #666;">精准提分，独家错题系统辅助，让考点无处遁形。</p>
+                    </div>
+
+                    <div class="contact-box">
+                        <div class="info-text">
+                            <p style="font-size: 1rem; margin-bottom: 5px;"><i class="fas fa-phone-alt"></i> 19331430350</p>
+                            <p style="font-size: 0.8rem; opacity: 0.9;"><i class="fas fa-map-marker-alt"></i> 天瑞城校区</p>
+                            <p style="font-size: 0.75rem; color: #ffcc00; margin-top: 5px;">*限时前20名领取¥299试听课</p>
+                        </div>
+                        <div class="qr-wrapper">
+                            <img src="二维码.jpg" alt="扫码咨询" class="qr-image">
+                            <span class="qr-label">长按抢占名额</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#" class="enroll-button pulse" id="enrollBtn">立即免费领取提分礼包 <i class="fas fa-arrow-right"></i></a>
+            
+            <div class="footer" style="padding: 15px; text-align: center; background: #0d4d9c; color: white; font-size: 0.8rem;">
+                © 2026 卓越辅导 - 把每一个孩子的进步当成我们的使命
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 自动克隆节点实现无缝滚动
+        const track = document.getElementById('teacherTrack');
+        track.innerHTML += track.innerHTML;
+
+        document.getElementById('enrollBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const phone = prompt("为了更好地为您分配老师，请输入您的联系电话：");
+            if(phone) alert("您的预约名额已锁定！顾问老师将在24小时内联系您送出试听大礼包。");
+        });
+    </script>
+</body>
+</html>
